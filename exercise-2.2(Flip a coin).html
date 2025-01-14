@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flip a coin</title>
+    <link rel="stylesheet" href="../Styles/flipacoin.css">    
+  </head>
+  <body>
+    <div class="top">
+      <button class="Flip" onclick="
+      flipaCoin();
+      coinFlips=coinFlips+1;
+      alert(`You have flipped the coin. The number of times coin has been flipped is ${coinFlips}.`)
+      ">🪙
+      Flip the coin
+    </button>
+    </div>
+   
+    <p>Take your choice</p>
+
+    <div class="bottom">
+      <div class="bottom1">
+        <button class="Head" onclick="
+      playerChoice='Head'
+      coinflipCheck();
+      ">Head
+      </button>
+      </div>
+  
+      <div class="bottom2">
+        <button class="Tail" onclick="
+        playerChoice='Tail'
+        coinflipCheck();
+        ">Tail
+        </button>
+      </div>
+    </div>
+
+    <script>
+      let coinFlips=0;
+      let computerMove='';
+    
+      function coinflipCheck() {
+        if(computerMove==='') {
+          alert(`The coin wasnot flipped.`);
+        }
+        else {
+          checktheResult(playerChoice);
+        }
+      }
+       
+        function checktheResult(playerChoice) {
+        let result='';
+        
+          if (playerChoice==='Head') {
+          if(computerMove==='Head') {
+            result='Tie.'
+          }
+          else {
+            result='You win.'
+          }
+         
+        }
+        else {
+          if(computerMove==='Tail') {
+            result='Tie.'
+          }
+          else {
+            result='You win.'
+          }
+        }
+        alert(`You chose ${playerChoice}. The coin was flipped to ${computerMove}. So, the result is ${result}`);
+        }
+
+      function flipaCoin () {
+        const randomNumber=Math.random();
+        
+        if(randomNumber>=0 && randomNumber<1/2) {
+          computerMove='Head';
+        }
+        else {
+          computerMove='Tail';
+        }
+      }
+    </script>
+  </body>
+</html>
