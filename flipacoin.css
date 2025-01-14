@@ -1,0 +1,58 @@
+.Flip , .Head , .Tail {
+  color:white;
+  border:none;
+  border-radius:8px;
+  padding-top:5px;
+  padding-bottom:5px;
+}
+.top {
+  text-align:center;
+}
+.bottom {
+  text-align:center;
+}
+.bottom1 , .bottom2 {
+  display:inline-block;
+}
+.bottom1 {
+  margin-right:30px;
+}
+.Flip {
+  background-color:blue;
+  padding-right:30px;
+  padding-left:30px;
+  transition:opactity 0.05s ,
+  padding 0.5s ;
+}
+
+.Head {
+  background-color:green;
+  padding-right:10px;
+  padding-left:10px;
+  transition:opactity 0.05s ,
+  padding 0.5s ;
+}
+.Head:hover {
+  opacity:0.5;
+  padding-right:20px;
+  padding-left:20px;
+  padding-top:10px;
+  padding-bottom:10px;
+}
+.Tail {
+  background-color:green;
+  padding-right:17px;
+  padding-left:17px;
+  transition:opactity 0.05s ,
+  padding 0.5s ;
+}
+.Tail:hover , .Flip:hover {
+  opacity:0.5;
+  padding-right:25px;
+  padding-left:25px;
+  padding-top:10px;
+  padding-bottom:10px;
+}
+p {
+  text-align:center;
+}
