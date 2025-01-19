@@ -50,23 +50,11 @@
        
         function checktheResult(playerChoice) {
         let result='';
-        
-          if (playerChoice==='Head') {
-          if(computerMove==='Head') {
-            result='Tie.'
-          }
-          else {
-            result='You win.'
-          }
-         
+        if(playerChoice===computerMove) {
+          result='You win.'
         }
         else {
-          if(computerMove==='Tail') {
-            result='Tie.'
-          }
-          else {
-            result='You win.'
-          }
+          result='You lose.'
         }
         alert(`You chose ${playerChoice}. The coin was flipped to ${computerMove}. So, the result is ${result}`);
         }
